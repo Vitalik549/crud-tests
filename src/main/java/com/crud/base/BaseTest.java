@@ -32,10 +32,8 @@ public class BaseTest {
         return PageConstructor.getInstance(clazz);
     }
 
-
     public void closeBrowser() {
         WebDriverRunner.closeWebDriver();
         log.info("Browser was closed!");
     }
-
 }

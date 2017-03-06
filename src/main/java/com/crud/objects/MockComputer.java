@@ -51,6 +51,4 @@ public class MockComputer extends BaseREST {
     public static String getResponseContent(Response response) {
         return ((RestAssuredResponseImpl) response).getContent().toString();
     }
-
-
 }

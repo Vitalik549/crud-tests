@@ -15,7 +15,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.io.TemporaryFilesystem;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.LocalFileDetector;
@@ -99,10 +98,7 @@ public class WebdriverManager {
         throw new IllegalStateException("Unknown OS: " + SystemUtils.OS_NAME);
     }
 
-    public static void main(String[] args) {
-        System.out.println(System.getProperty("java.io.tmpdir"));
-    }
-    private static void initializeDriver(String browserSystemVariable, Os os) {
+    private static void setSystemPropertyForTempDriver(String browserSystemVariable, Os os) {
         if (os.chromePath == null) return;
 
         String chromeDriverPath = os.getChromeDriverPath();
@@ -190,7 +186,7 @@ public class WebdriverManager {
 
     private static WebDriver initialiseLocalWebDriver() {
         Os os = getOs();
-        initializeDriver("webdriver.chrome.driver", os);
+        setSystemPropertyForTempDriver("webdriver.chrome.driver", os);
 
         WebDriver driver;
         DesiredCapabilities desiredCapabilities;

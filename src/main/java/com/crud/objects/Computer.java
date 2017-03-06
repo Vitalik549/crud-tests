@@ -65,7 +65,7 @@ public class Computer {
     }
 
     /**
-     * @return same coputer object with data fields adjusted to default format
+     * @return same computer object with data fields adjusted to default format
      */
     public Computer normalized() {
         try {
