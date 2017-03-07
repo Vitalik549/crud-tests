@@ -10,7 +10,7 @@ Application location: https://computer-database.herokuapp.com/
 ###Resources location:  
 1. Application: https://computer-database.herokuapp.com/  
 2. Project: https://github.com/Vitalik549/crud-tests  
-3. Test cases: https://goo.gl/7ocDf4  
+3. Test cases: https://goo.gl/A161XB   
 
 
 ###Maven installation:  
